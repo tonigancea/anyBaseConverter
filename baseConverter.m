@@ -1,9 +1,9 @@
-function r = baza(sursa,b1,b2)
+function r = baseConverter(source,b1,b2)
 table = ['0123456789abcdefghijklmnopqrst'];
 
-%prelucrarea sursei (transformare in baza 10)
-m = length(sursa);
-copie = sursa;
+%source processing (transformation in decimal)
+m = length(source);
+copie = source;
 copie = flip(copie);
 aux = [];
 i = 1;
@@ -24,7 +24,7 @@ for i=m:-1:1
  factor = b1*factor;
 endfor
 
-%prelucrarea destinatiei
+%result processing
 while nr != 0
   temp = rem(nr,b2);
   r = strcat(r,table(temp+1));
